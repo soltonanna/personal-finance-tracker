@@ -67,6 +67,11 @@ npx prisma migrate dev --name init
 npm run dev
 ```
 
+## RUN Database
+```bash
+npx prisma studio
+```
+
 ## Roadmap
  Setup database with Prisma + PostgreSQL
  Register / Login API
