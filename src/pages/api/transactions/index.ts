@@ -20,7 +20,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   if (method === 'POST') {
-    const { accountId, amount, type, category, note } = req.body;
+    const { accountId, amount, type, categoryId, note } = req.body;
+
+    if (!categoryId || typeof categoryId !== 'number') {
+      return res.status(400).json({ error: 'Category ID is required and must be a number' });
+    }
+
     const date = new Date();
 
     const transaction = await prisma.transaction.create({
@@ -28,7 +33,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         accountId,
         amount,
         type,
-        category,
+        categoryId,
         date,
         note,
       },

@@ -63,7 +63,7 @@ export const AccountForm: React.FC<AccountFormProps> = ({ token, onAccountCreate
 
   return (
     <div className="mb-6 p-4 bg-white shadow rounded">
-      <h2 className="text-xl font-semibold mb-2">➕ New Account</h2>
+      <h2 className="text-black text-xl font-semibold mb-2">➕ New Account</h2>
       <div className="flex flex-col sm:flex-row gap-4">
         <input
           type="text"

@@ -72,7 +72,7 @@ export const AccountItem: React.FC<AccountItemProps> = ({ account, token, onDele
         </div>
       ) : (
         <>
-          <span>
+          <span className='text-gray-500'>
             {account.name} — 💰 {account.balance.toFixed(2)} ֏
           </span>
           <div className="flex gap-2">

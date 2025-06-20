@@ -16,7 +16,7 @@ export const AccountList: React.FC<AccountListProps> = ({
   onUpdateAccount,
 }) => {
   if (accounts.length === 0) {
-    return <p>No accounts yet. Create one!</p>;
+    return <p className="text-black">No accounts yet. Create one!</p>;
   }
 
   return (
